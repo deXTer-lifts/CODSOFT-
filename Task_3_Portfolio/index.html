@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vishal Choudhary | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #673ab7, #512da8);
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      background: #311b92;
+      text-align: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffccbc;
+    }
+
+    section {
+      background: white;
+      margin: 25px auto;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      color: #6a1b9a;
+    }
+
+    #about img {
+      max-width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 20px auto;
+      border: 4px solid #ce93d8;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: square;
+    }
+
+    .project, .entry {
+      background: #f3e5f5;
+      border-left: 5px solid #7b1fa2;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease, background 0.3s;
+    }
+
+    .project:hover, .entry:hover {
+      background: #ede7f6;
+      transform: translateY(-4px);
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      margin-top: 10px;
+      background-color: #7b1fa2;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #4a0072;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 12px;
+      background: #6a1b9a;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #4a148c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #4527a0;
+      color: white;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        margin: 15px;
+        padding: 20px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>VISHAL CHOUDHARY</h1>
+    <p>Web Developer | NSS Volunteer | Creative Explorer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="vishal_photo.jpg" alt="Vishal Choudhary">
+    <p>
+      Hello! I’m <strong>Vishal Choudhary</strong>, a passionate web developer and a vibrant NSS volunteer from KC College, HSNC University. I’m someone who loves combining technology and creativity to build meaningful digital experiences.
+    </p>
+    <p>
+      I’ve led event tech teams, coordinated 50+ volunteers during university campaigns, and brought impact through platforms like <em>Mega Blood Donation Drive</em>, <em>YUVA SAMVAD</em>, and <em>Millet Conference</em>. I thrive on teamwork, leadership, and solving problems creatively.
+    </p>
+    <p>
+      Outside tech, I’m a camera enthusiast, gamer, gym-goer, and always up for creative challenges — whether digital or real-world. My mission? Build cool things, grow constantly, and create a positive mark.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills Summary</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript (Basics)</li>
+      <li>Git & GitHub, Responsive Design</li>
+      <li>Event Management & Coordination</li>
+      <li>Leadership & Teamwork</li>
+      <li>Photography, Communication, Creativity</li>
+      
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="entry"><strong>2024:</strong> KC College – HSNC University (Degree)</div>
+    <div class="entry"><strong>2021:</strong> SKC College – HSC Board</div>
+    <div class="entry"><strong>2019:</strong> US English High School – SSC Board</div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience & Volunteering</h2>
+    <div class="entry">
+      <strong>Event Incharge:</strong> Mega Blood Donation Drive, HSNC Lecture Series  
+      <br>• Coordinated 50+ volunteers and managed logistics across university-wide events.
+    </div>
+    <div class="entry">
+      <strong>Tech Manager:</strong> YOUTH CONCLAVE, MILLET CONFERENCE, ANANDOTSAV NSS FEST
+    </div>
+    <div class="entry">
+      <strong>Volunteer:</strong> YUVA SAMVAD, SRD/NRD Selections, Indradhanush, Meri Mati Mera Desh, All Saints Home Visit
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Art Gallery Website</h3>
+      <p>Designed a digital portfolio for an artist using HTML & CSS. Clean, responsive, and gallery-focused layout.</p>
+    </div>
+    <div class="project">
+      <h3>Landing Page</h3>
+      <p>A landing page for a fictional product, demonstrating UI/UX design, call-to-action emphasis, and responsive alignment.</p>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <a class="btn" href="https://drive.google.com/file/d/1AnaWdMCRXGdMDi89GoZId1AW7te7OoXx/view?usp=sharing" download>📄 Download My Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p><strong>Email:</strong> vishalchoudhary1769@gamil.com</p>
+    <p><strong>Phone:</strong> +91 7021862426</p>
+
+    <form>
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Your email" required>
+      <input type="text" placeholder="Phone number" required>
+      <textarea rows="4" placeholder="Your message" required></textarea>
+      <button type="submit">SEND MESSAGE</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Vishal Choudhary. Built with 💜 and HTML/CSS.</p>
+  </footer>
+
+</body>
+</html>

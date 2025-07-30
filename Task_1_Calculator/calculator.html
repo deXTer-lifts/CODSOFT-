@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Scientific Calculator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background: #1a1a2e;
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+      width: 350px;
+    }
+
+    .display {
+      background: #000;
+      color: #8a2be2;
+      font-size: 28px;
+      padding: 18px;
+      border-radius: 10px;
+      text-align: right;
+      margin-bottom: 20px;
+      border: 2px solid #8a2be2;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .display::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .display::-webkit-scrollbar-thumb {
+      background: #8a2be2;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #282c34;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: #8a2be2;
+      transform: scale(1.05);
+      color: black;
+    }
+
+    .equal {
+      background: #8a2be2;
+      color: black;
+    }
+
+    .equal:hover {
+      background: #a74cff;
+    }
+
+    @media (max-width: 400px) {
+      .calculator {
+        width: 90%;
+      }
+      button {
+        font-size: 16px;
+        padding: 12px;
+      }
+      .display {
+        font-size: 24px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="append('%')">%</button>
+      <button onclick="append('**')">^</button>
+      <button onclick="sqrt()">√</button>
+      <button onclick="backspace()">⌫</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('/')">÷</button>
+      <button onclick="square()">x²</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('*')">×</button>
+      <button onclick="pi()">π</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('-')">−</button>
+      <button onclick="calculate()" class="equal">=</button>
+
+      <button onclick="append('0')" style="grid-column: span 2;">0</button>
+      <button onclick="append('.')">.</button>
+      <button onclick="append('+')">+</button>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+
+    function append(value) {
+      if (display.textContent === '0' || display.textContent === 'Error') {
+        display.textContent = value;
+      } else {
+        display.textContent += value;
+      }
+    }
+
+    function clearDisplay() {
+      display.textContent = '0';
+    }
+
+    function backspace() {
+      let content = display.textContent;
+      display.textContent = content.length > 1 ? content.slice(0, -1) : '0';
+    }
+
+    function calculate() {
+      try {
+        display.textContent = eval(display.textContent);
+      } catch (e) {
+        display.textContent = 'Error';
+      }
+    }
+
+    function sqrt() {
+      try {
+        display.textContent = Math.sqrt(eval(display.textContent));
+      } catch {
+        display.textContent = 'Error';
+      }
+    }
+
+    function square() {
+      try {
+        let val = eval(display.textContent);
+        display.textContent = val * val;
+      } catch {
+        display.textContent = 'Error';
+      }
+    }
+
+    function pi() {
+      append(Math.PI.toFixed(8));
+    }
+  </script>
+
+</body>
+</html>

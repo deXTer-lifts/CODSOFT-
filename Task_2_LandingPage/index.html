@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DexterZilla Gym | Elite City Fitness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/6195/6195700.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background: #000; color: #fff; }
+    header { background: #111; position: sticky; top:0; z-index:100; padding:20px; display:flex; justify-content: space-between; align-items:center; box-shadow:0 2px 8px rgba(255,0,0,0.3); }
+    header h1 { color: red; font-size:30px; cursor:default; transition:transform .3s; }
+    header h1:hover { transform:scale(1.1); }
+    nav a { color:#fff; margin: 0 12px; font-weight:bold; text-decoration:none; transition:color .3s; }
+    nav a:hover { color:red; }
+    section { padding:60px 20px; max-width:1000px; margin:0 auto; }
+    .hero { text-align:center; padding:120px 20px; background:linear-gradient(135deg, #111, #222); }
+    .hero h2 { color: red; font-size:44px; margin-bottom:20px; transition: color .3s; }
+    .hero h2:hover { color: #ff4d4d; }
+    .hero p { font-size:18px; color:#ccc; margin-bottom:30px; }
+    .hero a { background: red; color:#000; padding:15px 30px; border-radius:5px; font-weight:bold; text-decoration:none; transition: background .3s; }
+    .hero a:hover { background:#ff3333; }
+    .section h2 { color: red; font-size:32px; margin-bottom:20px; text-align:center; }
+    .features, .services, .trainers, .pricing { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+    .card { background:#111; padding:20px; border-radius:8px; width:280px; box-shadow:0 0 10px rgba(255,0,0,0.2); transition:transform .3s; }
+    .card:hover { transform:scale(1.05); box-shadow:0 0 15px red; }
+    .card h3 { color:red; margin-bottom:10px; }
+    .card p { color:#ccc; font-size:15px; }
+    .pricing .card { border:2px solid red; }
+    .services ul { list-style: none; padding-left:0; }
+    .services li { margin:8px 0; font-size:16px; color:#ccc; }
+    .faq details { background:#111; padding:15px; margin-bottom:10px; border-left:4px solid red; border-radius:5px; cursor:pointer; }
+    .newsletter { text-align:center; }
+    .newsletter input { padding:12px; border:none; width:250px; border-radius:5px; margin-right:10px; }
+    .newsletter button { padding:12px 20px; background:red; color:#000; border:none; border-radius:5px; cursor:pointer; transition:background .3s; }
+    .newsletter button:hover { background:#ff3333; }
+    footer { text-align:center; padding:20px; background:#111; color:#aaa; }
+    @media(max-width:768px){ .card { width:90%; } .pricing, .services, .trainers { flex-direction: column; align-items:center; } .newsletter input { width:70%; margin-bottom:10px; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DexterZilla Gym</h1>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#services">Services</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#newsletter">Join</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h2>City’s Most Elite Fitness Experience</h2>
+    <p>Train like a beast. Transform like a king. Full amenities, expert trainers, exclusive community.</p>
+    <a href="#pricing">Become a Member</a>
+  </section>
+
+  <section id="features">
+    <h2>Key Features</h2>
+    <div class="features">
+      <div class="card">
+        <h3>24/7 Access</h3>
+        <p>Train anytime with secure member-only entry and biometric access.</p>
+      </div>
+      <div class="card">
+        <h3>Premium Equipment</h3>
+        <p>State-of-the-art machines, free weights, cardio suites, and recovery lounges.</p>
+      </div>
+      <div class="card">
+        <h3>Personal Training</h3>
+        <p>World-class certified trainers curating custom workout plans.</p>
+      </div>
+    </div>
+  </section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>🧘 Group Classes</h3>
+      <p>Daily Yoga, Zumba, HIIT, and Spin sessions led by certified instructors for all fitness levels.</p>
+    </div>
+    <div class="card">
+      <h3>🥗 Nutrition Coaching</h3>
+      <p>Customized diet plans, 1-on-1 consultations, and monthly nutrition tracking by experts.</p>
+    </div>
+    <div class="card">
+      <h3>💆 Recovery Zone</h3>
+      <p>In-house massage therapy, ice baths, sauna rooms, and guided meditation sessions.</p>
+    </div>
+    <div class="card">
+      <h3>🧪 Fitness Testing</h3>
+      <p>Body composition scans, strength benchmarks, and cardio fitness evaluations every month.</p>
+    </div>
+    <div class="card">
+      <h3>🚿 Full Amenities</h3>
+      <p>Smart lockers, hot showers, changing rooms, and complimentary towel service included.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="trainers">
+    <h2>Meet Our Trainers</h2>
+    <div class="trainers">
+      <div class="card"><h3>Asha Mehta</h3><p>Strength Coach: Specializes in muscle gain and mobility.</p></div>
+      <div class="card"><h3>Rahul Sen</h3><p>Cardio & Conditioning Expert: HIIT and endurance training.</p></div>
+      <div class="card"><h3>Nina Roy</h3><p>Yoga & Recovery Specialist: Balance, flexibility, stress relief.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="pricing">
+      <div class="card"><h3>Monthly</h3><p>₹9999 / month – All-access membership.</p></div>
+      <div class="card"><h3>Quarterly</h3><p>₹25999 / 3 months – Includes nutrition consult.</p></div>
+      <div class="card"><h3>Annual</h3><p>₹84999 / year – Best value with assessment & freebies.</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently Asked</h2>
+    <div class="faq">
+      <details><summary>Do you offer trial passes?</summary><p>Yes, 3-day free trial pass available.</p></details>
+      <details><summary>Are group classes included?</summary><p>Yes, unlimited access to all classes.</p></details>
+      <details><summary>Is there parking available?</summary><p>Yes—secured, valet parking included.</p></details>
+    </div>
+  </section>
+
+  <section id="newsletter" class="newsletter">
+    <h2>Ready to Join?</h2>
+    <p>Subscribe for a trial pass or latest updates.</p>
+    <form><input type="email" placeholder="Your email address"><button>Subscribe</button></form>
+  </section>
+
+  <footer>
+    <p>© 2025 DexterZilla Gym. Built by Vishal Choudhary 💪</p>
+  </footer>
+
+</body>
+</html>
