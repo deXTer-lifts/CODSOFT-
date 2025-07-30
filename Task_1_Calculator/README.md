@@ -1,9 +1,9 @@
 
 
-### ✅ Task 3 – Calculator (Web)
+### ✅ Task 1 – Calculator (Web)
 
 markdown
-# Task 3 – Calculator
+# Task 1 – Calculator
 
 This is a fully functional scientific calculator built using HTML, CSS, and JavaScript.  
 It was created as part of the **CodSoft Web Development Internship (Level 1 – July 2025).
