@@ -1,4 +1,4 @@
-# Task 1 – Portfolio Website
+# Task 3 – Portfolio Website
 
 This is a simple and responsive personal portfolio website developed using HTML and CSS.  
 It was created as part of the *CodSoft Web Development Internship (Level 1 – July 2025)*.
